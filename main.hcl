@@ -6,9 +6,15 @@ module "match_and_group" {
 resource "lab" "main" {
   title       = "$match and $group Stages"
   description = "Learn to use the $match and $group aggregation pipeline stages in MongoDB."
-  timelimit   = "20m"
+  layout      = module.match_and_group.output.layout_default
 
-  page {
-    ref = module.match_and_group.output.page_match_and_group
+  content {
+    chapter "match-and-group" {
+      title = "$match and $group"
+
+      page "match-and-group" {
+        reference = module.match_and_group.output.page_match_and_group
+      }
+    }
   }
 }
