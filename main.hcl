@@ -1,6 +1,6 @@
 module "match_and_group" {
   source  = "instruqt/instruqt-module-match-and-group-stages"
-  version = "1.0.0"
+  version = "1.1.0"
 }
 
 resource "lab" "main" {
